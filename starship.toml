@@ -1,0 +1,39 @@
+format = """
+[  ](fg:#1793d1 bg:#2b2c32)\
+[](fg:#2b2c32 bg:#00d995)\
+$time\
+$username\
+$directory\
+[](fg:#0085FF bg:#2b2c32)\
+$cmd_duration\
+[](fg:#2b2c32)\
+$line_break\
+$character\
+"""
+
+add_newline = false
+command_timeout = 1000
+
+[username]
+show_always = true
+style_user = "#2b2c32"
+style_root = "#DC2020"
+format = '[](fg:#00D995 bg:$style)[ $user ](bg:$style)[](fg:$style bg:#0085FF)'
+
+[directory]
+style = "fg:#1A1A1A bg:#0085FF"
+format = "[ $path ]($style)"
+truncation_length = 4
+truncation_symbol = "…/"
+
+[time]
+disabled = false
+time_format = "%I:%M"
+style = "fg:#1A1A1A bg:#00D995"
+format = '[ $time ]($style)'
+
+[cmd_duration]
+min_time = 0
+show_milliseconds = true
+style = "bg:#2b2c32"
+format = '[ took $duration ]($style)'
