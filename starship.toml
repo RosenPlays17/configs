@@ -1,12 +1,12 @@
 format = """
-[  ](fg:#1793d1 bg:#2b2c32)\
-[](fg:#2b2c32 bg:#00d995)\
+[  ](fg:#1793d1 bg:#2b2c34)\
+[](fg:#2b2c32 bg:#81fbb7)\
 $time\
 $username\
 $directory\
-[](fg:#0085FF bg:#2b2c32)\
+[](fg:#6483ff bg:#2b2c34)\
 $cmd_duration\
-[](fg:#2b2c32)\
+[](fg:#2b2c34)\
 $line_break\
 $character\
 """
@@ -16,12 +16,12 @@ command_timeout = 1000
 
 [username]
 show_always = true
-style_user = "#2b2c32"
+style_user = "#2b2c34"
 style_root = "#DC2020"
-format = '[](fg:#00D995 bg:$style)[ $user ](bg:$style)[](fg:$style bg:#0085FF)'
+format = '[](fg:#81fbb7 bg:$style)[ $user ](bg:$style)[](fg:$style bg:#6483ff)'
 
 [directory]
-style = "fg:#1A1A1A bg:#0085FF"
+style = "fg:#1A1A1A bg:#6483ff"
 format = "[ $path ]($style)"
 truncation_length = 4
 truncation_symbol = "…/"
@@ -29,11 +29,11 @@ truncation_symbol = "…/"
 [time]
 disabled = false
 time_format = "%I:%M"
-style = "fg:#1A1A1A bg:#00D995"
+style = "fg:#1A1A1A bg:#81fbb7"
 format = '[ $time ]($style)'
 
 [cmd_duration]
 min_time = 0
 show_milliseconds = true
-style = "bg:#2b2c32"
+style = "bg:#2b2c34"
 format = '[ took $duration ]($style)'
